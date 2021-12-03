@@ -22,7 +22,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/', (req, res) => {
+app.post('/validation', (req, res) => {
+  console.log(req)
   const busBoy = new Busboy({ headers: req.headers })
 
   busBoy.on('error', e => {
